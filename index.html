@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection Campaign</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        /* General styles for the body and container */
+        body {
+            font-family: Arial, sans-serif; /* Font for better readability */
+            background-color: #f8d3e2; /* Light pink background color */
+            margin: 0;
+            padding: 20px; /* Space around the container */
+        }
+        .container {
+            max-width: 800px; /* Limit the width of the content */
+            margin: auto; /* Center the container */
+            background-color: #ffffff; /* White background for the container */
+            padding: 20px; /* Padding for the container */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+        }
+        p {
+            margin: 0; /* Reset margins */
+            padding: 10px; /* Add some padding for better spacing */
+            color: #4B0082; /* Dark violet color for the text */
+        }
+        h1 {
+            text-align: center; /* Center the heading */
+            color: #D5006D; /* Bright pink color for the heading */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reflection Paper</h1>
+        
+        <p id="para1">
+            When I arrived at the venue, I didn't expect much. I was caught off guard by what I would encounter, feeling a mix of curiosity and skepticism. I was with my friends, sitting next to Khate, and we were leaning on each other for comfort and support. As the presentation began, I paid attention but was not fully engaged. I understood the purpose of our gathering and what we were meant to learn; however, I held out hope that I would discover something new and insightful from this campaign.
+        </p>
+        
+        <p id="para2">
+            Unfortunately, the presentation turned out to be subpar. It was clear that many in the audience were distracted and not fully absorbing the information being presented. I could guarantee that some of us were not paying attention to the videos being shown on the screen. It wasn't until the Colonel took the stage that my focus shifted from my friends to the speaker. Suddenly, I felt a spark of interest as I listened to his words, and a thought dawned on me: the internet's power and potential dangers are literally at our fingertips.
+        </p>
+
+        <p id="para3">
+            The speaker discussed the government's laws on cybersecurity and their effectiveness in protecting internet users. He emphasized the serious consequences of engaging in illegal online activities, such as fraud, data theft, hacking personal information, and identity theft. These scenarios sounded like something out of a hacker movie, where individuals could face severe penalties, including life imprisonment, for their actions. This idea was frightening and sobering; I sensed that others in the room shared this unease. It wasn't just fear of the unknown but a genuine concern about the potential legal repercussions for careless behavior online.
+        </p>
+
+        <p id="para4">
+            As the presentation continued, I became increasingly aware of how interconnected our lives have become with technology. The speaker's insights highlighted the vulnerability we all face in our digital lives. With each new piece of information, I felt more informed about the importance of being cautious and responsible when using the internet. It was a wake-up call, reminding me that ignorance could lead to dire consequences.
+        </p>
+
+        <p id="para5">
+            Before I knew it, four hours had passed, and I realized I had learned a great deal from this campaign. It underscored why we, as IT students, must prioritize data privacy and cybersecurity awareness. The event highlighted the significance of spreading this knowledge not just among students but also to the broader community, particularly as technology increasingly permeates our lives. We must not allow ourselves to become blinded by our arrogance or ignorance; instead, we should strive to be open-minded, rational, and understanding.
+        </p>
+
+        <p id="para6">
+            In conclusion, this campaign served as a crucial reminder of the importance of cybersecurity in our digitally driven world. It emphasized the need for individuals to recognize their responsibilities as internet users and the potential consequences of their actions. I left the venue feeling more informed and aware of the issues surrounding data privacy and cybersecurity. The experience was invaluable, and I am grateful for the opportunity to participate in such an enlightening event. It is essential for us to remain vigilant and informed, not only for ourselves but also for those around us, as we navigate an increasingly complex digital landscape. The lessons learned from this experience will undoubtedly shape my approach to using technology more responsibly and securely in the future.
+        </p>
+    </div>
+
+    <py-script>
+        from pyscript import Element
+
+        # Function to change text color
+        def change_text_color(color):
+            # Select all paragraph elements
+            paragraphs = Element('para1'), Element('para2'), Element('para3'), Element('para4'), Element('para5'), Element('para6')
+            for p in paragraphs:
+                p.element.style.color = color
+
+        # Function to fix paragraph margins
+        def fix_paragraph_margins(margin_value):
+            paragraphs = Element('para1'), Element('para2'), Element('para3'), Element('para4'), Element('para5'), Element('para6')
+            for p in paragraphs:
+                p.element.style.margin = margin_value
+
+        # Change text color to black and margins to 10px on page load
+        change_text_color("black")
+        fix_paragraph_margins("10px")
+    </py-script>
+</body>
+</html>
